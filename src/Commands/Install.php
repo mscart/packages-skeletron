@@ -1,10 +1,10 @@
 <?php
 
-namespace MsCart\Orders\Commands;
+namespace MsCart\:uc:package\Commands;
 
 use App\Models\Package;
 use Illuminate\Console\Command;
-use MsCart\Orders\Models\Order;
+use MsCart\:uc:package\Models\:sg:package;
 use Spatie\Permission\Models\Permission;
 
 
@@ -19,7 +19,7 @@ class Install extends Command
 	 * The name and signature of the console command.
 	 * @var string
 	 */
-	protected $signature = 'orders:install';
+	protected $signature = ':lc:package:install';
 
 	/**
 	 * The console command description.
@@ -35,16 +35,16 @@ class Install extends Command
 	public function handle()
 	{
 		$this->info('Install package...');
-		$order = new Order();
-		$package_model = $order->getMorphClass();
+		$p = new :sg:package();
+		$package_model = $p->getMorphClass();
 		$package_version = '1.0.0';
 		$package_options = [
 			'name' => 'orders::order.name',
 			'permissions' => [
-				'orders::role.create',
-				'orders::role.read',
-				'orders::role.edit',
-				'orders::role.delete',
+				':lc:package::role.create',
+				':lc:package::role.read',
+				':lc:package::role.edit',
+				':lc:package::role.delete',
 			]
 		];
 
