@@ -35,7 +35,7 @@ class Install extends Command
 	public function handle()
 	{
 		$this->info('Install package...');
-		$order = new :uc:package();
+		$order = new :sg:package();
 		$package_model = $order->getMorphClass();
 		$package_version = '1.0.0';
 		$package_options = [
