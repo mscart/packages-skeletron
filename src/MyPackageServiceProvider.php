@@ -6,6 +6,16 @@ use Illuminate\Support\ServiceProvider;
 
 class :uc:packageServiceProvider extends ServiceProvider
 {
+	
+	/**
+	 * The console commands.
+	 *
+	 * @var bool
+	 */
+	protected $commands = [
+		':uc:vendor\:uc:package\Commands\Install',
+	];
+	
     /**
      * Perform post-registration booting of services.
      *
@@ -13,8 +23,8 @@ class :uc:packageServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', ':lc:vendor');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', ':lc:vendor');
+        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', ':lc:package');
+        // $this->loadViewsFrom(__DIR__.'/../resources/views', ':lc:package');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
@@ -77,6 +87,6 @@ class :uc:packageServiceProvider extends ServiceProvider
         ], ':lc:package.views');*/
 
         // Registering package commands.
-        // $this->commands([]);
+        $this->commands($this->commands);
     }
 }
