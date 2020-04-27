@@ -35,16 +35,16 @@ class Install extends Command
 	public function handle()
 	{
 		$this->info('Install package...');
-		$order = new Order();
+		$order = new uc:package();
 		$package_model = $order->getMorphClass();
 		$package_version = '1.0.0';
 		$package_options = [
-			'name' => ':lc:package:::sg:package.name',
+			'name' => ':lc:package:::sglc:package.name',
 			'permissions' => [
-				':uc:package::role.create',
-				':uc:package::role.read',
-				':uc:package::role.edit',
-				':uc:package::role.delete',
+				':lc:package::role.create',
+				':lc:package::role.read',
+				':lc:package::role.edit',
+				':lc:package::role.delete',
 			]
 		];
 
