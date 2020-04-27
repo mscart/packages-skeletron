@@ -35,7 +35,7 @@ class :uc:packageServiceProvider extends ServiceProvider
         
         $menu =  \Menu::get('Sidebar');
 		$acl = $menu->add(__(':lc:package:::sglc:package.name'),    ['segment2'=>':lc:package', 'icon'=> 'icon-cart'])->nickname(':sglc:package')->data('order', 1);
-		$menu->order->add(__(':lc:package:::sglc:package.list'),config('app.admin_prefix').'/:lc:package');
+		$menu->:sglc:package->add(__(':lc:package:::sglc:package.list'),config('app.admin_prefix').'/:lc:package');
     }
 
     /**
