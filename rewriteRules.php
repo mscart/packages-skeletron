@@ -8,4 +8,5 @@ return [
     'src/Models/MyPackage.php' => 'src/Models/:sg:package.php',
     'src/MyPackageServiceProvider.php' => 'src/:uc:packageServiceProvider.php',
     'src/Controllers/MyPackageController.php' => 'src/Controllers/:uc:packageController.php',
+    'src/Commands/Install.php' => 'src/Commands/Install.php',
 ];
